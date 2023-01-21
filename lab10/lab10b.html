@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+  Reach page using:
+  https://www.cs.ryerson.ca/~a44gupta/lab10b.html
+
+-->
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CGI Ruby/Python Form</title>
+  <style>
+    body{
+      background-color:#ccccff;
+      font-family:sans-serif;
+    }
+    div {
+      margin-top: 10px;
+    }
+    input{
+      margin-top: 10px;
+    }
+    select{
+      margin-top: 10px;
+    }
+    h2{
+      color: purple;
+    }
+  </style>
+</head>
+<body>
+<div>
+ <h2>Information</h2>
+ <form method="post">
+        City: 
+        <input type="text" name="city"><br>
+        Province/State: 
+        <input type="text" name="province"><br>
+        Country: 
+        <input type="text" name="country"><br>
+        Picture URL: 
+        <input type="text" name="url"><br>
+
+        <input type="submit" formaction="https://www2.scs.ryerson.ca/~a44gupta/cgi-bin/lab10r.cgi" name="submit1" value="Submit Form (Ruby)">
+        <input type="submit" formaction="https://www2.scs.ryerson.ca/~a44gupta/cgi-bin/lab10p.cgi" name="submit2" value="Submit Form (Python)">
+      </form>
+</div>
+</body>
+</html>

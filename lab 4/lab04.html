@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<!--
+  Can reach this page using:
+  https://www.cs.ryerson.ca/~a44gupta/lab04.html
+-->
+
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Verification</title>
+
+    <script src="lab04.js"></script>
+
+    <style>
+      body{
+        background-color:azure;
+      }
+      .container{
+        font-family: sans-serif;
+        font-size: 1.25em;
+      }
+      div {
+        margin-top: 10px;
+      }
+      form{
+        text-align: center;
+        font-size: 1.25em;
+      }
+      input{
+        margin-top: 20px;
+      }
+      #formOutput{
+        font-family:'Courier New', Courier, monospace;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 2.5em;
+        color: #7979fa;
+      }
+      #charCount, #letterCount{
+        font-family: 'Courier New', Courier, monospace;
+        color: #7979fa;
+        font-weight: bold;
+        font-size: 1.5em;
+      }
+      a:hover{
+        color: red;
+      }
+    </style>
+
+  </head>
+
+  <body onload="addBookmarks()">
+    <div class="container">
+      <h1>Form:</h1>
+      <form>
+        Name: <input type="text" id="name"/> <br>
+        Address: <input type="text" id="address"/> <br>
+        Phone #: <input type="text" id="phone" /> <br>
+        <input type="button" onclick="validate()"
+	value="Validate Form">
+      </form>
+      <div id="formOutput"></div>
+      <div>
+        <textarea id="textArea" name="Enter Characters:" rows="8" cols="60" oninput="charCount(document.getElementById('textArea')); letterCount(document.getElementById('textArea'))">Sample text</textarea>
+        <span>
+          Character Count: <span id="charCount">11</span>.
+          Letter Count: <span id="letterCount">10</span><br>
+        </span>
+      </div>
+      <h3>My favourite websites:</h3>
+      <ul id="bookmarks">
+      </ul>
+      <div>
+      <input type="button" onclick="addBookmarks()" value="Call bookmarks function"/> In case it does not run on page load.
+      </div>
+    </div>
+  </body>
+</html>

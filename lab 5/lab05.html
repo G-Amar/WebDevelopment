@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<!--
+  Can reach this page using:
+  https://www.cs.ryerson.ca/~a44gupta/lab05.html
+-->
+
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>    
+
+    <script>
+      $(document).ready(function () {
+        $("#icon").hide();
+        $(".draggable").draggable();
+        function expand(){
+          let e=$("#expand");
+          e.off('mouseenter mouseleave');
+          e.css("position", "absolute");
+          e.animate({height:"96vw", width:"96vw"}, 3000);
+          $("#icon").show();
+        }
+        $("#expand").hover(expand)
+        $("#icon").click(function(){
+          $("#icon").hide();
+          let e=$("#expand");
+          e.css("position", "relative");
+          e.animate({height:"50vw", width:"50vw"}, 3000);
+          e.bind('mouseenter', expand);
+        });
+
+        $("#save").click(function(){
+          html2canvas(document.querySelector('#picture'), {useCORS:true}).then(function(canvas) {
+            // create temporary link to save the picture
+            let savelink = document.createElement('a');
+
+            savelink.href = canvas.toDataURL();
+            savelink.download = 'potato.png';
+            document.body.appendChild(savelink);
+            // click link to save image
+            savelink.click();
+            //remove the link when done
+            document.body.removeChild(savelink);
+          });
+        });
+
+      });
+    </script>
+
+    <style>
+      div {
+        margin-top: 10px;
+      }
+      img {
+        margin-top: 10px;
+      }
+      button {
+        margin-top: 10px;
+        margin-right: 10px;
+      }
+      #body {
+        z-index: -1;
+        /* position: absolute;
+          left:300px;
+          top:100px; */
+      }
+      #expand{
+        z-index: 2;
+        width:50vw;
+        height:50vw;
+        position: relative;
+        top: 1px;
+        left: 10px;
+      }
+      #icon{
+        z-index: 3;
+        position: absolute;
+        top: 10px;
+        left: 20px;
+      }
+      .draggable:hover, #icon:hover{
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="picture">
+        <h1>Mr. Potato Head (Drag 'n Drop)</h1> <br><br>
+        <img id="body" src="potato_body.png" alt="potato body">
+        <br>
+        <div>
+          <img class="draggable" id="eyes" src="potato_eyes.png" alt="potato eyes">
+          <img class="draggable" id="nose" src="potato_nose.png" alt="potato nose">
+          <img class="draggable" id="hat" src="potato_hat.png" alt="potato hat">
+          <img class="draggable" id="mouth" src="potato_mouth.png" alt="potato mouth">
+        </div>
+      </div>
+
+      <button id="save">Save!</button><br>
+
+      <div>
+        <img id="icon" src="shrink.png" alt="shrink">
+        <img id="expand" src="banff.jpg" alt="banff">
+      </div>
+    </div>
+  </body>
+</html>

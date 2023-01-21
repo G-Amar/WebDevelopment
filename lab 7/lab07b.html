@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<!--
+  Can reach this page using:
+  https://www.cs.ryerson.ca/~a44gupta/lab07b.html
+-->
+
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form with Perl</title>
+  </head>
+
+  <style>
+    body{
+      background-color:beige;
+      text-align: center;
+      color:blue;
+      font-family:sans-serif;
+    }
+    div {
+      margin-top: 10px;
+    }
+    input{
+      margin-top: 10px;
+    }
+    select{
+      margin-top: 10px;
+    }
+    form{
+      text-align: center;
+    }
+    h2{
+      color: brown;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <h2>Information</h2>
+      <form
+        action="https://www2.scs.ryerson.ca/~a44gupta/cgi-bin/lab07b.cgi"
+        method="post"
+        enctype="multipart/form-data">
+        First name: 
+        <input type="text" name="first"><br>
+        Last name: 
+        <input type="text" name="last"><br><br>
+        Address: <br>
+        Street Name: 
+        <input type="text" name="street"><br>
+        City: 
+        <input type="text" name="city"><br>
+        Postal Code: 
+        <input type="text" name="postal"><br>
+        Province:
+        <select name="province">
+          <option value="Ontario">Ontario</option>
+          <option value="Alberta">Alberta</option>
+          <option value="British Columbia">British Columbia</option>
+          <option value="Manitoba">Manitoba</option>
+          <option value="New Brunswick">New Brunswick</option>
+          <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+          <option value="Nova Scotia">Nova Scotia</option>
+          <option value="Prince Edward Island">Prince Edward Island</option>
+          <option value="Quebec">Quebec</option>
+          <option value="Saskatchewan">Saskatchewan</option>
+          <option value="Northwest Territories">Northwest Territories</option>
+          <option value="Nunavut">Nunavut</option>
+          <option value="Yukon">Yukon</option>
+        </select><br><br>
+        Phone #: 
+        <input type="text" name="phone"><br>
+        Email: 
+        <input type="text" name="email"><br>
+        Photograph: 
+        <input type="file" name="picture"><br>
+        <input type="submit" name="submit" value="Submit Form">
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+
+/*image will fill the entire container, height will adjust accordingly*/
+img {width: 100%; height:auto;}
+
+.container-fluid{
+  background-color: #a7e5d1;
+  color: red;
+  font-size: 2vw;
+}
+
+.heading{
+  color: blueviolet;
+  font-size: 2.5vw;
+}
+
+.center{
+  text-align: center;
+}
+
+.row{margin-bottom: 10px;}
+
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .container-fluid{
+    background-color: #89e88f;
+    color: purple;
+    font-size: 2.5vw;
+  }
+  .heading{
+    color: #cc3f0b;
+    font-size: 3vw;
+  }
+  
+}
+
+@media only screen and (max-width: 767px){
+  .container-fluid{
+    background-color: #e7b280;
+    color: green;
+    font-size: 1.3em;
+  }
+  .heading{
+    color: #d70591;
+    font-size: 1.5em;
+  }
+}

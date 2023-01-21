@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200">
+  <polygon points="60,10 10,110 110,110" style="fill:yellow; stroke:black; stroke-width:2"></polygon>
+  <polygon points="130,10 130,110 230,110 230,10" style="fill:cyan; stroke:black; stroke-width:2"></polygon>
+  <polygon points="250,50, 270,110 330,110, 350,50, 300,10" style="fill:pink; stroke:black; stroke-width:2"></polygon>
+  <polygon points="375,35 375,85 420,110 465,85 465,35 420,10" style="fill:turquoise; stroke:black; stroke-width:2"></polygon>
+  <text x="10" y="130" style="fill:black; font-size:17px; font-weight:bold; font-family:sans-serif; letter-spacing:1px;">
+    <tspan x="25">Triangle</tspan>
+    <tspan x="123">Quadrilateral</tspan>
+    <tspan x="260">Pentagon</tspan>
+    <tspan x="380">Hexagon</tspan>
+  </text>
+</svg>

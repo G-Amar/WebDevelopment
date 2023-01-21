@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<!--
+  Can reach this page using:
+  https://www.cs.ryerson.ca/~a44gupta/lab06.html
+-->
+
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Demonstration</title>
+  </head>
+
+  <style>
+    div {
+      margin-bottom: 10px;
+    }
+    .flag{
+      width: 200px;
+      height: 100px;
+      border: 2px solid black;
+      margin-left: 8px;
+      margin-right: 10px;
+    }
+    h2{
+      font-family: sans-serif;
+    }
+    body{
+      background-color: aquamarine;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <h2>Scalable Vector Graphics</h2>
+      <br>
+      <div>
+        <img src="lab06.svg" alt="polygon svg">
+      </div>
+      <br>
+      <h2>Flags</h2>
+      <div>
+        <svg width="220" height="150">
+          <rect x="10" y="10" style="width:200px; height:100px; fill:red; stroke-width:2px; stroke:black;"></rect>
+          <rect x="60" y="10" style="width:100px; height:100px; fill:white; stroke-width:1px; stroke:black;"></rect>
+          <polygon points="110,20 115,30 120,25 115,55 125,40 128,45 135,43 132,50 137,53 120,75 125,80 111,75 113,100 107,100 109,75 95,80 100,75 83,53 88,50 85,43 92,45 95,40 105,55 100,25 105,30" style="fill:red; stroke-width:1px; stroke:black;"></polygon>
+          <text x="55" y="130" style="fill:black; font-size:17px; font-weight:bold; font-family:sans-serif; letter-spacing:1px;">
+            Canada SVG
+          </text>
+        </svg>
+        <svg width="220" height="150">
+          <rect x="10" y="10" style="width:200px; height:100px; fill:white; stroke-width:2px; stroke:black;"></rect>
+          <circle cx="110" cy="60" r = "30" style="fill:red; stroke-width:1px; stroke:black;"></circle>
+          <text x="62" y="130" style="fill:black; font-size:17px; font-weight:bold; font-family:sans-serif; letter-spacing:1px;">
+            Japan SVG
+          </text>
+        </svg>
+        <br>
+        <img class="flag" src="Canada.png" alt="Canadian Flag">
+        <img class="flag" src="Japan.png" alt="Japanese Flag">
+      </div>
+    </div>
+  </body>
+</html>

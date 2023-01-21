@@ -12,7 +12,7 @@ This lab includes two fully responsive webpages. The first is made with HTML/CSS
 ## Lab 4: JavaScript Dynamic Webpage
 This lab uses JavaScript to make the webpage dynamic, adding interactivity and dynamic updates to the page.
 
-## Lab 5: jQuery Draggable Components and Dynamic Animations
+## Lab 5: jQuery Animations
 This lab uses jQuery to create draggable components and dynamic animations on the webpage.
 
 ## Lab 6: Scalable Vector Graphics (SVGs)

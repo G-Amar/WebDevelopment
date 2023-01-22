@@ -12,7 +12,7 @@ https://www.cs.ryerson.ca/~a44gupta/lab02.html
 This lab includes two fully responsive webpages. The first is made with HTML/CSS and media queries, while the second uses the Bootstrap framework.\
 https://www.cs.ryerson.ca/~a44gupta/lab03.html \
 https://www.cs.ryerson.ca/~a44gupta/lab03a.html \
-https://www.cs.ryerson.ca/~a44gupta/lab03b.html \
+https://www.cs.ryerson.ca/~a44gupta/lab03b.html
 
 ## Lab 4: JavaScript Dynamic Webpage
 This lab uses JavaScript to make the webpage dynamic, adding interactivity and dynamic updates to the page. \
